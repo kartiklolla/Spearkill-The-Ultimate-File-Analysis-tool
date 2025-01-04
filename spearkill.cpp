@@ -6,35 +6,35 @@
 using namespace std;
 
 void runFileAnalysis(const string& filename) {
-    system(("./file_type " + filename).c_str());
-    system(("./ASCII_string_extraction " + filename).c_str());
+    system(("file_type " + filename).c_str());
+    system(("ASCII_string_extraction " + filename).c_str());
 }
 
 void runHexDump(const string& filename) {
-    system(("./hexdump " + filename).c_str());
+    system(("hexdump " + filename).c_str());
 }
 
 
 void runLsbAnalysis(const string& filename, const string& outFile) {
     cout << "Running LSB analysis on: " << filename << endl;
-    system(("./lsb_datdecry00 " + filename + " " + outFile).c_str());
+    system(("lsb_datdecry00 " + filename + " " + outFile).c_str());
 }
 
 void runPasswordCracking(const string& hashFile) {
     cout << "Running password cracking on: " << hashFile << endl;
-    system(("./password_crack " + hashFile).c_str());
+    system(("johnny " + hashFile).c_str());
 }
 
 void runCustomEncryption(const string& imgFile, const string& outFile, const string& txtFile, int skipPixels, int startColumn, int shift) {
     cout << "Encrypting data into image: " << imgFile << endl;
-    system(("./lsb_customencrypt " + imgFile + " " + outFile + " " + txtFile + " " +
+    system(("lsb_customencrypt " + imgFile + " " + outFile + " " + txtFile + " " +
             to_string(skipPixels) + " " + to_string(startColumn) + " " + to_string(shift))
                .c_str());
 }
 
 void runCustomDecryption(const string& imgFile, const string& outFile, int skipPixels, int startColumn, int shift) {
     cout << "Decrypting data from image: " << imgFile << endl;
-    system(("./lsb_customdecrypt " + imgFile + " " + outFile + " " + to_string(skipPixels) + " " +
+    system(("lsb_customdecrypt " + imgFile + " " + outFile + " " + to_string(skipPixels) + " " +
             to_string(startColumn) + " " + to_string(shift))
                .c_str());
 }
@@ -86,6 +86,8 @@ Examples:
 }
 
 int main(int argc, char* argv[]) {
+    system("python3 /home/tenth_spear/SPEARKILL/Spearkill-The-Ultimate-File-Analysis-tool/req2.py");
+
     if (argc == 1) {
         printSpearkillArt();
         displayIntroMessage();
@@ -94,7 +96,7 @@ int main(int argc, char* argv[]) {
 
     struct option longOptions[] = {
         {"analyze", required_argument, nullptr, 'a'},
-	{"hexdump", required_argument, nullptr, 'x'},
+	    {"hexdump", required_argument, nullptr, 'x'},
         {"lsb", required_argument, nullptr, 'l'},
         {"password", required_argument, nullptr, 'p'},
         {"encrypt", required_argument, nullptr, 'e'},

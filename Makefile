@@ -7,8 +7,8 @@ LIBS_MAGIC = -lmagic
 LIBS_OPENCV = `pkg-config --cflags --libs opencv4`
 
 # Binaries and sources
-BINARIES = spearkill file_type ASCII_string_extraction hexdump johntheripper lsb_datdecry00 lsb_customencrypt lsb_customdecrypt 
-SOURCES = spearkill.cpp file_type.cpp ASCII_string_extraction.cpp hexdump.cpp johntheripper.cpp lsb_datdecry00.cpp lsb_customencrypt.cpp lsb_customdecrypt.cpp
+BINARIES = spearkill file_type ASCII_string_extraction hexdump johnny lsb_datdecry00 lsb_customencrypt lsb_customdecrypt 
+SOURCES = spearkill.cpp file_type.cpp ASCII_string_extraction.cpp hexdump.cpp johnny.cpp lsb_datdecry00.cpp lsb_customencrypt.cpp lsb_customdecrypt.cpp
 
 # Default target
 all: $(BINARIES)
@@ -26,11 +26,11 @@ ASCII_string_extraction: ASCII_string_extraction.cpp
 hexdump: hexdump.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $<
 
-johntheripper: johtheripper.cpp
+johnny: johnny.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $<
 
 lsb_datdecry00: lsb_datdecry00.cpp
-        $(CXX) $(CXXFLAGS) -o $@ $< $(LIBS_OPENCV)
+	$(CXX) $(CXXFLAGS) -o $@ $< $(LIBS_OPENCV)
 
 lsb_customencrypt: lsb_customencrypt.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $< $(LIBS_OPENCV)

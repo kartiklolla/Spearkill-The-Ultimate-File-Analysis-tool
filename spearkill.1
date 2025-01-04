@@ -34,26 +34,25 @@ Decrypts text data from an image which was encoded using custom encryption metho
 
 .SS EXAMPLES
 Run file analysis:
-.B spearkill -a file
+spearkill -a file
 
 Run hexdump:
-.B spearkill -x file
+spearkill -x file
 
 Run LSB analysis:
-.B spearkill -l image.png output.txt
+spearkill -l image.png output.txt
 
 Run password cracking:
-.B spearkill -p hash.txt
+spearkill -p hash.txt
 
 Embed encrypted data in an image:
-.B spearkill -e image.png encrypted_image.png secret.txt 5 10 3
+spearkill -e image.png encrypted_image.png secret.txt 5 10 3
 
 Decrypt data from an image:
-.B spearkill -d encrypted_image.png output.txt 5 10 3
+spearkill -d encrypted_image.png output.txt 5 10 3
 
 .SH AUTHOR
 Written by Kartik Lolla (the_tenth_spear)
-Github email id: kartiklolla.1@gmail.com
 Github username: kartiklolla
 
 .SH USED LIBRARIES

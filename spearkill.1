@@ -1,0 +1,63 @@
+.SS NAME
+spearkill - Multipurpose file analysis, data hiding, and password cracking tool
+
+.SS SYNOPSIS
+.B spearkill
+.RI [ options ] " <file>"
+.RI [ -a ] " <file_analysis>"
+.RI [ -x ] " <file_analysis>"
+.RI [ -l ] " <image_for_lsb> <output_file>"
+.RI [ -p ] " <hash_file>"
+.RI [ -e ] " <image> <output_image> <file> <skip_pixels> <start_column> <shift>"
+.RI [ -d ] " <image> <output_file> <skip_pixels> <start_column> <shift>"
+
+.SS DESCRIPTION
+Spearkill performs a variety of functions based on the selected options:
+
+.B -a
+Analyzes the file by extracting ASCII/Unicode text and checking its magic bytes.
+
+.B -x
+Analyzes the file by making its hexdump.
+
+.B -l
+Performs Least Significant Bit (LSB) data extraction from an image file.
+
+.B -p
+Uses John the Ripper to crack password-protected files by using a provided hash.
+
+.B -e
+Encrypts and embeds text data into an image using a custom encryption method with Caesar cipher.
+
+.B -d
+Decrypts text data from an image which was encoded using custom encryption method.
+
+.SS EXAMPLES
+Run file analysis:
+.B spearkill -a file
+
+Run hexdump:
+.B spearkill -x file
+
+Run LSB analysis:
+.B spearkill -l image.png output.txt
+
+Run password cracking:
+.B spearkill -p hash.txt
+
+Embed encrypted data in an image:
+.B spearkill -e image.png encrypted_image.png secret.txt 5 10 3
+
+Decrypt data from an image:
+.B spearkill -d encrypted_image.png output.txt 5 10 3
+
+.SH AUTHOR
+Written by Kartik Lolla (the_tenth_spear)
+Github email id: kartiklolla.1@gmail.com
+Github username: kartiklolla
+
+.SH USED LIBRARIES
+.BR john (1),
+.BR opencv (2),
+.BR magic (3).
+

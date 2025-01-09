@@ -86,7 +86,7 @@ Examples:
 }
 
 int main(int argc, char* argv[]) {
-    system("python3 /home/tenth_spear/SPEARKILL/Spearkill-The-Ultimate-File-Analysis-tool/req2.py");
+    system("python3 /usr/local/req2.py");
 
     if (argc == 1) {
         printSpearkillArt();

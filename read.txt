@@ -1,0 +1,3 @@
+Please download Opencv library and ensure it works well and then perform the make operations.
+Issues maybe faced when being downloaded on ArchLinux.
+Happy Hacking!!

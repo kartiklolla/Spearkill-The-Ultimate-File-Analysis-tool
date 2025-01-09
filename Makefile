@@ -48,9 +48,11 @@ install:
 	cp $(BINARIES) /usr/local/bin/
 	mkdir -p /usr/local/man/man1
 	cp spearkill.1 /usr/local/man/man1/
+	cp req2.py /usr/local/
 
 # Uninstall target
 uninstall:
 	rm -f /usr/local/bin/$(BINARIES)
 	rm -f /usr/local/man/man1/spearkill.1
+	rm -f /usr/local/req2.py
 

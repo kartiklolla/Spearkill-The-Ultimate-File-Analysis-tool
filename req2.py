@@ -3,7 +3,7 @@ from datetime import datetime
 import getpass
 import os
 
-LOG_DIR = os.path.expanduser("~/spearkill_logs")
+LOG_DIR = os.path.expanduser("/usr/local/spearkill_logs")
 LOG_FILE = os.path.join(LOG_DIR, "spearkill_error.log")
 
 def setup_logging():

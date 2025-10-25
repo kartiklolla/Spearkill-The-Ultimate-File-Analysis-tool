@@ -1,6 +1,6 @@
 Spearkill is a versatile, command-line-based tool designed to perform a wide range of file operations, including file analysis, data hiding, and password cracking. Its modular design and functionality make it suitable for cybersecurity tasks, steganography, and digital forensics. 
 
-1.File Analysis 
+1. File Analysis 
 
     Purpose: Provides detailed insights into the file's structure and content. 
 
